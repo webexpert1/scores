@@ -20,6 +20,12 @@ interface Props {
 
 const FilterWrapper = styled.div`
   display:flex;
+  margin-left:10px;
+  // background-color: red;
+  // position:fixed;
+  // top:20;
+  // width:100%;
+  // z-index:100;
 `
 
 const FilterContainer = styled.button`
@@ -27,6 +33,13 @@ const FilterContainer = styled.button`
   border: 1px solid #353935;
   text-align: center;
   padding: 6px 0;
+  gap: 10px
+`
+
+const FilterText = styled.div`
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
 `
 
 const Home: NextPage<Props> = () => {
@@ -96,6 +109,8 @@ const Home: NextPage<Props> = () => {
      
       <PageLayout>
       <div>
+          
+          <FilterText>Filters</FilterText>
           <FilterWrapper>
             <FilterContainer onClick={handleAllFilterClick}> All ({parsedData.length})</FilterContainer>
             <FilterContainer onClick={handleFinishedFilterClick}> Result   ({finishedMatches.length})</FilterContainer>
