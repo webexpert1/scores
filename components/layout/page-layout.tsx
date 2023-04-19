@@ -17,9 +17,7 @@ const TopNav = styled.nav`
   padding: 10px;
 
   background-image: url('/images/footballnet.jpg');
-  background-size: cover;
   background-position: center;
-
 `;
 
 const LeftNav = styled.nav`

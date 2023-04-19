@@ -156,25 +156,24 @@ const MatchItem = (
     return(
         <Card>
         <CardBody>
-        <CardSubTitle>{country}</CardSubTitle>
-        <CardTitle>{competition}</CardTitle>
+            <CardSubTitle>{country}</CardSubTitle>
+            <CardTitle>{competition}</CardTitle>
 
             <StatusText type={status.type}>
                 {statusLabelFormatter(status.type, timestamp)}
             </StatusText>
-        <Container>
-            <div>
-                <ScoreTitle> {homeScore.current || 0 }</ScoreTitle>
-            </div>
-            <div>
-                <ScoreTitle>-</ScoreTitle>
-            </div>
-            <div>
-                <ScoreTitle>{awayScore.current || 0 }</ScoreTitle>
-            </div>
-        </Container>
-
-        <RowContainer>
+            <Container>
+                <div>
+                    <ScoreTitle> {homeScore.current || 0 }</ScoreTitle>
+                </div>
+                <div>
+                    <ScoreTitle>-</ScoreTitle>
+                </div>
+                <div>
+                    <ScoreTitle>{awayScore.current || 0 }</ScoreTitle>
+                </div>
+            </Container>
+            <RowContainer>
             <Container>
                 <Div>
                     <CardSubTitle>
@@ -205,7 +204,6 @@ const MatchItem = (
                 </Div>
             </Container>
             </RowContainer>
-
         </CardBody>
     </Card>
     )

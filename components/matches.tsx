@@ -32,7 +32,7 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const MatchesPage = ({ matches }: { matches: MatchProp[] }) => {
+const Matches = ({ matches }: { matches: MatchProp[] }) => {
   return (
     <CardContainer>
       {matches.map((match: MatchProp, index: number) => (
@@ -44,4 +44,4 @@ const MatchesPage = ({ matches }: { matches: MatchProp[] }) => {
   );
 };
 
-export default MatchesPage;
+export default Matches;

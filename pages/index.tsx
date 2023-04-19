@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import CircleText from './CircleText'
 import { useEffect, useState } from 'react';
 import PageLayout from '../components/layout/page-layout';
-import MatchesPage from '../components/matches-page';
+import MatchesPage from '../components/matches';
 
 import { MatchProp } from './types';
 import styled from 'styled-components';
@@ -27,12 +27,15 @@ const FilterWrapper = styled.div`
   // z-index:100;
 `
 
-const FilterContainer = styled.button`
+const FilterContainer = styled.div`
   width: 150px;
   border: 1px solid #353935;
+  border-radius: 8px;
   text-align: center;
   padding: 6px 0;
-  gap: 10px
+  margin-right: 4px;
+  gap: 10px;
+  cursor: pointer;
 `
 
 const FilterText = styled.div`
