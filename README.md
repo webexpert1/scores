@@ -19,5 +19,12 @@ npm run dev
 
 ```
 
+## To run test:
+
+```bash
+
+npm test
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

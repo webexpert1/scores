@@ -1,9 +1,7 @@
 import React from 'react';
 import { MatchProp } from '../pages/types';
 import styled from 'styled-components';
-import CircleText from '../pages/CircleProgress';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { timeStamp } from 'console';
 
 interface StatusTextProps extends React.HTMLAttributes<HTMLSpanElement> {
     type: string;
@@ -35,7 +33,6 @@ const CardTitle = styled.div`
   text-align: center;
   color: white;
   margin: 8px
-//   font-family: 'Barlow', sans-serif;
 `;
 
 const CardWhiteTitle = styled(CardTitle)`
@@ -48,7 +45,6 @@ const CardSubTitle = styled(CardTitle)`
     font-size: 16px;
     margin-top: 20px;
     font-weight: 100
-    // font-family: 'Barlow', sans-serif;
 `
 
 const LiveStatusTitle = styled.div`
@@ -155,7 +151,7 @@ export const statusLabelFormatter = (currentStatusType: string, timestamp: numbe
 }
 
 const MatchItem = (
-    { country, name, competition, liveStatus, status, homeTeam, awayTeam, homeScore, awayScore, timestamp }: MatchProp) => {
+    { country, competition, liveStatus, status, homeTeam, awayTeam, homeScore, awayScore, timestamp }: MatchProp) => {
     const { type } = status;
 
     return(
@@ -211,9 +207,6 @@ const MatchItem = (
             </Container>
             </RowContainer>
 
-        
-         {/* <CircleText percentage={60} text="Canceled`" strokeWidth={10} color="#00ff00" /> */}
-        {/* <CircleText percentage={60} text="ft`" strokeWidth={10} color="#00ff00" /> */}
         </CardBody>
     </Card>
     )
