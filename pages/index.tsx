@@ -1,7 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 import 'react-circular-progressbar/dist/styles.css';
 import CircleText from './CircleText'
@@ -9,10 +6,12 @@ import { useEffect, useState } from 'react';
 import PageLayout from '../components/layout/page-layout';
 import MatchesPage from '../components/matches-page';
 
-import useSWR from 'swr';
 import { MatchProp } from './types';
 import styled from 'styled-components';
 import { useMatches } from '../hooks/useMatches';
+
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 interface Props {
   items: any;
@@ -97,7 +96,7 @@ const Home: NextPage<Props> = () => {
 
   if (isError) return <div>Failed to load</div>;
   //Handle the loading state
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <div><Skeleton count={40} /></div>;
 
   const parsedData = JSON.parse(data);
   const notStartedMatches = parsedData.filter((match: MatchProp) => match.status.type === 'notstarted');
