@@ -127,7 +127,6 @@ export const liveScoreFormatter = (currentStatusType: string, currentLiveStatus:
 }
 
 export const statusLabelFormatter = (currentStatusType: string, timestamp: number) => {
-    console.log(currentStatusType)
     switch(currentStatusType) {
         case 'notstarted': 
             const date = new Date(timestamp);
