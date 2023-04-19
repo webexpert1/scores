@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-
+import Image from 'next/image';
 interface PageLayoutProps {
   children: ReactNode;
 }
@@ -56,6 +56,7 @@ export const PageLayout = ({children}: PageLayoutProps) =>   {
     return (
       <PageContainer>
         <TopNav>
+          {/* <Image src="/images/logo-2.png" height={100} width={100} alt="logo" /> */}
           <h1>Live Scores.</h1>
          
         </TopNav>
