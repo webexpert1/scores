@@ -15,6 +15,11 @@ a {
   box-sizing: border-box;
 }
 
+.CircularProgressbar {
+  width: 70%;
+  vertical-align: middle;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

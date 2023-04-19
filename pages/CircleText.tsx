@@ -7,12 +7,13 @@ interface Props {
   text: string;
   strokeWidth?: number;
   color?: string;
+  trailWidth?: number;
 }
 
 const CircleContainer = styled.div`
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
 `;
 
 const CircleText: FunctionComponent<Props> = ({
@@ -31,7 +32,8 @@ const CircleText: FunctionComponent<Props> = ({
           textSize: "20px",
           textColor: "#000000",
           pathColor: color,
-          trailColor: "#d6d6d6"
+          trailColor: "#d6d6d6",
+          
         })}
       />
     </CircleContainer>
